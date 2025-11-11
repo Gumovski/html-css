@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Введение - HTML и CSS</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Введение</h1>
+        
+        <p>HTML и CSS предназначены для разметки web-страниц и управления их внешним видом.</p>
+        
+        <p>Страница состоит из тегов:</p>
+        
+        <ul>
+            <li>Парные теги - имеющие открывающий и закрывающий тег. <code>&lt;название_тега&gt;</code>...<code>&lt;/название_тега&gt;</code></li>
+            <li>Одиночные теги - состоят из одного тега <code>&lt;название_тега/&gt;</code></li>
+        </ul>
+        
+        <p>У тегов могут быть атрибуты.</p>
+        
+        <pre><code>&lt;тег атрибут[="значение"]&gt;&lt;/тег&gt;</code></pre>
+        
+        <h2>Структура html-страницы</h2>
+        
+        <pre><code>&lt;!-- Определяет версию html = 5 --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;!-- lang="ru" - установка языка страницы для его правильного отображения --&gt;
+&lt;html lang="ru"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;!-- Заголовок в браузере --&gt;
+    &lt;title&gt;Введение&lt;/title&gt;
+&lt;/head&gt;
+&lt;!-- Основная страница --&gt;
+&lt;body&gt;
+&lt;!-- Заголовочные теги --&gt;
+&lt;!-- Крупный заголовок  h1 .. h6  Мелкий заголовок --&gt;
+&lt;h2&gt;Вводное занятие&lt;/h2&gt;
+&lt;!-- &lt;hr&gt; - вывод линии --&gt;
+&lt;hr&gt;
+
+&lt;!-- Текст выводится при помощи тега &lt;p&gt; --&gt;
+&lt;!-- Текст параграфа, не реагирует на пробельные символы. --&gt;
+&lt;p&gt;Специалисты из Университета Западного Лондона связали употребление молока с увеличением роста и веса древних людей в
+    некоторых регионах 7000-2000 лет назад. Результаты работы описываются в статье, опубликованной в журнале PNAS.&lt;/p&gt;
+&lt;!-- &lt;br&gt; - перенос строки --&gt;
+&lt;p&gt;В процессе исследования были изучены рост и масса тела 3507 скелетов, возраст которых составляет около 25 тысяч лет.
+    Антропологи заметили, &lt;br&gt; что между 15 и 10 тысячами лет назад люди по всей Евразии и Северо-Восточной Африке
+    существенно потеряли в росте и весе.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        
+        <hr>
+        
+        <h3>Теги</h3>
+        
+        <div class="blockquote">
+            <ol>
+                <li><code>&lt;!DOCTYPE&gt;</code><br>
+                    Предназначен для указания текущей версии html-документа.</li>
+                <li><code>&lt;html&gt;&lt;/html&gt;</code><br>
+                    Контейнер для содержимого всей веб страницы (включая <code>&lt;head&gt;</code> и <code>&lt;body&gt;</code>).</li>
+                <li><code>&lt;head&gt;&lt;/head&gt;</code><br>
+                    Содержит элементы для предоставления браузеру информации о странице, а также для подключения к странице внешних документов.<br>
+                    Это теги: <code>&lt;base&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;script&gt;</code>, <code>&lt;style&gt;</code>, <code>&lt;title&gt;</code>.</li>
+                <li><code>&lt;meta&gt;</code><br>
+                    Предназначен для хранения метаинформации, предназначенной для браузера и поисковых систем.<br>
+                    Атрибуты: <code>charset</code>, <code>content</code>, <code>http-equiv</code>, <code>name</code>.</li>
+                <li><code>&lt;title&gt;&lt;/title&gt;</code><br>
+                    Определяет заголовок страницы в браузере.</li>
+                <li><code>&lt;body&gt;&lt;/body&gt;</code><br>
+                    Содержит весь контент веб-страницы, который отображается в браузере.</li>
+                <li><code>&lt;h2&gt;&lt;/h2&gt;</code><br>
+                    Блочный элемент. Представляет собой заголовок второго уровня.<br>
+                    Атрибуты: <code>align</code>.</li>
+                <li><code>&lt;hr&gt;</code><br>
+                    Блочный элемент. Отображет горизонтальную линию на странице.<br>
+                    Атрибуты: <code>color</code>, <code>size</code>, <code>width</code>.</li>
+                <li><code>&lt;p&gt;&lt;/p&gt;</code><br>
+                    Блочный элемент. Представляет собой текстовый абзац.</li>
+                <li><code>&lt;br&gt;</code><br>
+                    Устанавливает перенос строки.</li>
+            </ol>
+        </div>
+        
+        <h3>Атрибуты</h3>
+        <div class="blockquote">
+            <ol>
+                <li><code>lang="код_языка"</code><br>
+                    Применяется к тегам для установки стиля отображения текста в зависимости от указанного языка.</li>
+                <li><code>html</code><br>
+                    Определят 5 версию html-разметки.</li>
+                <li><code>charset</code><br>
+                    Задаёт кодировку документа.</li>
+                <li><code>align</code><br>
+                    Выравнивает содержимое контейнера.<br>
+                    Значения: <code>center</code>, <code>left</code>, <code>right</code>, <code>justify</code>.</li>
+            </ol>
+        </div>
+    </div>
+
+</body>
+</html>
