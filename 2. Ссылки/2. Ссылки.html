@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ссылки - HTML и CSS</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ссылки</h1>
+        
+        <p>Необходимы для перехода на другую страницу или для перемещения внутри страницы.</p>
+        
+        <p>Для создания ссылки используется тег <code>&lt;a&gt;&lt;/a&gt;</code>.</p>
+        
+        <h3>Атрибуты:</h3>
+        
+        <div class="blockquote">
+            <p><code>href</code><br>
+            url внешнего ресурса, путь к документу внутри проекта или якорь</p>
+            <p><code>target</code><br>
+            Окно открытия ссылки<br>
+            Значения:<br>
+            <code>_blank</code> - Открытие ссылки в новом окне<br>
+            <code>_self</code> - Открытие ссылки а текущем окне</p>
+            <p><code>download</code><br>
+            Вместо перехода по ссылке, предлагает скачать файл.</p>
+            <p><code>title</code><br>
+            Добавляет к ссылке всплывающую подсказку.</p>
+        </div>
+
+        <pre><code>&lt;p&gt;Баскетбол входит в программу &lt;a href="olympic.html"&gt;Олимпийских игр&lt;/a&gt; с 1936 года (изобретатель игры
+&lt;a title="Страница в википедии" target="_blank" href="https://ru.wikipedia.org/wiki/Нейсмит,_Джеймс"&gt;Джеймс Нейсмит&lt;/a&gt;
+был там в качестве гостя).
+Регулярные чемпионаты мира по баскетболу среди мужчин проводятся с 1950 года, среди женщин — с 1953 года,
+а чемпионаты Европы — с 1935 года.&lt;/p&gt;</code></pre>
+        
+        <h2>Переход внутри документа</h2>
+        
+        <p>Для перехода внутри документа используется якорь - элемент помеченый атрибутом <code>id</code>.<br>
+        Для перехода по якорям в атрибуте <code>href</code> указывают <code>#id</code>.</p>
+        
+        <pre><code>&lt;a href="#about"&gt;&lt;/a&gt;
+&lt;h1 id="about"&gt;&lt;/h1&gt;</code></pre>
+        
+        <hr>
+        
+        <h3>Теги</h3>
+        
+        <div class="blockquote">
+            <ol>
+                <li><code>&lt;a&gt;&lt;/a&gt;</code><br>
+                    Гиперссылка</li>
+            </ol>
+        </div>
+        
+        <h3>Атрибуты</h3>
+        <div class="blockquote">
+            <ol>
+                <li><code>id</code><br>
+                   Уникальный идентификатор элемента. Не может повторяться на странице.</li>
+                <li><code>href</code><br>
+                   Ссылка на ресурс, файл или якорь.</li>
+                <li><code>target</code><br>
+                   Метод открытия ссылки.</li>
+                <li><code>download</code><br>
+                   Указание браузеру на то, что документ нужно не открывать, а скачивать.</li>
+                <li><code>title</code><br>
+                   Всплывающая подсказка ссылки.</li>
+            </ol>
+        </div>
+    </div>
+
+</body>
+</html>

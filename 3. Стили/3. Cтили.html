@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стили - HTML и CSS</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Стили</h1>
+        
+        <p>Стили отвечают за внешний вид компонентов страницы.</p>
+        
+        <p class="list-header">Стили могут задаваться в:</p>
+        <ol>
+            <li>Внутри тега элемента</li>
+            <li>На странице в теге <code>&lt;style&gt;</code></li>
+            <li>В файле css</li>
+        </ol>
+
+        <h2>Внутри тега элемента</h2>
+        <pre><code>&lt;p style="color: darkorchid; font-size: x-large"&gt; — спортивная командная игра с мячом, в которой мяч забрасывают руками в кольцо соперника.&lt;/p&gt;</code></pre>
+        <p>Стили отделяются друг от друга <code>;</code>.</p>
+
+        <h2>На странице в теге <code>&lt;style&gt;</code></h2>
+        <pre><code>&lt;head&gt;
+    ...
+    &lt;style&gt;
+        .main-definition {
+            color: blue;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Баскетбол&lt;/h1&gt;
+&lt;p class="main-definition"&gt; — спортивная командная игра с мячом, в которой мяч забрасывают руками в кольцо соперника.&lt;/p&gt;
+...</code></pre>
+
+        <h2>В файле css</h2>
+        <p>index.html</p>
+        <pre><code>&lt;head&gt;
+    ...
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Баскетбол&lt;/h1&gt;
+&lt;p class="main-definition"&gt; — спортивная командная игра с мячом, в которой мяч забрасывают руками в кольцо соперника.&lt;/p&gt;
+...</code></pre>
+        <p>style.css</p>
+        <pre><code>.main-definition {
+    color: red;
+}</code></pre>
+        <p>Файлы в html подключаются при помощи тега <code>&lt;link&gt;</code>, в котором указывается тип связи <code>rel="stylesheet"</code> и путь до файла <code>href="style.css"</code>.</p>
+
+        <p>Данные способы расположены в порядке уменьшения приоритета.</p>
+        <p>Для принудительного установления стиля используют ключевое слово <code>!important</code>, которое добавляется после значения свойства.</p>
+        <pre><code>.main-definition {
+    color: red !important;
+}</code></pre>
+        <p>Стили задаются при помощи свойств и их значений, разделённых <code>:</code>.</p>
+        <p>Элементы, к которым применяются стили, задаются при помощи <strong>селекторов</strong>.</p>
+
+        <hr>
+
+        <h3>Теги</h3>
+        <div class="blockquote">
+            <ol>
+                <li><code>&lt;style&gt;&lt;/style&gt;</code><br>
+                    Контейнер для описания стилей страницы.</li>
+                <li><code>&lt;link&gt;</code><br>
+                    Подключение внешних файлов к странице.</li>
+            </ol>
+        </div>
+
+        <h3>Атрибуты</h3>
+        <div class="blockquote">
+            <ol>
+                <li><code>class</code><br>
+                    Задаёт класс элементу.<br>
+                    У элемента может быть несколько классов. Каждый класс отделяется пробелом.</li>
+                <li><code>href</code><br>
+                    Задаёт путь до файла.</li>
+                <li><code>rel</code><br>
+                    Задаёт тип подключаемого файла.</li>
+            </ol>
+        </div>
+
+        <h3>Свойства</h3>
+        <div class="blockquote">
+            <ol>
+                <li><code>color</code><br>
+                    Задаёт цвет текста. Цвет можно задавать несколькими способами: ключевыми словами (например, black, red), функцией rgb(), шестнадцатеричным кодом, моделью HSL и HWB.</li>
+            </ol>
+        </div>
+    </div>
+
+</body>
+</html>
