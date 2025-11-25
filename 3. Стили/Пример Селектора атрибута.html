@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Селектор атрибута</title>
+    <style>
+        div {
+            border: 1px solid black;
+            padding: 5px;
+            width: 75px;
+            height: 75px;
+            display: inline-block;
+        }
+
+        /*
+        [class] {
+            background-color: deepskyblue;
+        }
+        */
+        /*
+        [class=example] {
+            background-color: deepskyblue;
+        }
+        */
+        /*
+        [class~=example] {
+            background-color: deepskyblue;
+        }
+        */
+        /*
+        [class|=example] {
+            background-color: deepskyblue;
+        }
+        */
+        /*
+        [class^=example] {
+            background-color: deepskyblue;
+        }
+        */
+        /*
+        [class$=style] {
+            background-color: deepskyblue;
+        }
+        */
+        [class*=ex] {
+            background-color: deepskyblue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="example-style"></div>
+    <div class="style"></div>
+    <div class="example"></div>
+    <div class="ex"></div>
+</body>
+</html>
