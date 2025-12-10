@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Комбинирование селекторов</title>
+    <style>
+        .block {
+            border: 1px solid black;
+            padding: 50px;
+            display: inline-block;
+        }
+        .block div {
+            border: 1px solid black;
+            margin-top: 10px;
+        }
+
+        /* Селектор нескольких элементов (,) */
+        h1, h2, p {
+            color: #d63384;
+        }
+
+        /* Селектор потомка (пробел) */
+        .block div p {
+            font-size: 20px;
+        }
+
+        /* Селектор дочернего элемента (>) */
+        .block > p {
+            background-color: yellow;
+        }
+
+        /* Селектор соседнего элементов (+) */
+        .first-line + p {
+            background-color: cornsilk;
+        }
+
+        /* Селектор общего родственного элемента (~) */
+        h1 ~ p {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        <h1>Заголовок 1</h1>
+        <p>Описание ...</p>
+        <div class="block">
+            <h1>Заголовок 2</h1>
+            <div class="sub-block">
+                <p class="first-line">Текст 1</p>
+                <p>Подтекст 1</p>
+                <p>Подтекст 2</p>
+            </div>
+            <div class="sub-block">
+                <p class="first-line">Текст 2</p>
+                <p>Подтекст 1</p>
+                <p>Подтекст 2</p>
+            </div>
+        </div>
+        <p>Заключение</p>
+    </div>
+</body>
+</html>
