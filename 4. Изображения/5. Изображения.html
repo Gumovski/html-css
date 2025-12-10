@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Изображения - HTML и CSS</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Изображения</h1>
+        
+        <p>Для вставки изображения в HTML используется тег <code>&lt;img&gt;</code>.</p>
+        
+        <h3>Атрибуты</h3>
+        <div class="blockquote">
+            <ol>
+                <li><code>src</code><br>
+                    путь к изображению</li>
+                <li><code>alt</code><br>
+                    текст, который будет показан, если изображение не загрузилось</li>
+                <li><code>width</code><br>
+                    ширина изображения. По умолчанию: ширина исходного изображения</li>
+                <li><code>height</code><br>
+                    высота изображения. По умолчанию: высота исходного изображения</li>
+            </ol>
+        </div>
+
+        <pre><code>&lt;img src="image.png" alt="Изображение"&gt;</code></pre>
+
+        <h2>Карта изображения <code>&lt;map&gt;</code></h2>
+        
+        <p>Позволяет создавать карту изображений с активными областями.</p>
+        
+        <p>Карта изображения состоит из элементов <code>&lt;area&gt;</code>.</p>
+        
+        <pre><code>&lt;img src="url" usemap="#имя_карты"&gt;
+&lt;map name="имя_карты"&gt;
+...
+&lt;/map&gt;</code></pre>
+
+        <h3>Атрибуты элемента <code>&lt;area&gt;</code></h3>
+        <div class="blockquote">
+            <ol>
+                <li><code>shape</code><br>
+                    форма области. Может принимать следующие значения:
+                    <ul>
+                        <li><code>rect</code> - прямоугольник</li>
+                        <li><code>circle</code> - круг</li>
+                        <li><code>poly</code> - многоугольник</li>
+                    </ul>
+                </li>
+                <li><code>coords</code><br>
+                    координаты области.
+                    <ul>
+                        <li>для <code>rect</code> - координаты левого верхнего и правого нижнего углов</li>
+                        <li>для <code>circle</code> - координаты центра и радиуса</li>
+                        <li>для <code>poly</code> - координаты точек, которые соединяются линиями</li>
+                    </ul>
+                </li>
+                <li><code>href</code><br>
+                    ссылка, которая откроется при клике по области</li>
+                <li><code>alt</code><br>
+                    текст, который будет показан, если изображение не загрузилось</li>
+            </ol>
+        </div>
+
+        <pre><code>&lt;img src="solar_system.jpg" alt="Солнечная система" usemap="#planetmap"&gt;
+
+&lt;map name="planetmap"&gt;
+    &lt;area shape="circle" coords="180,180,60" href="sun.html" alt="Солнце"&gt;
+    &lt;area shape="circle" coords="270,190,20" href="mercury.html" alt="Меркурий"&gt;
+    &lt;area shape="circle" coords="330,185,30" href="venus.html" alt="Венера"&gt;
+    &lt;area shape="circle" coords="390,185,35" href="earth.html" alt="Земля"&gt;
+    &lt;area shape="circle" coords="450,180,25" href="mars.html" alt="Марс"&gt;
+&lt;/map&gt;</code></pre>
+
+    </div>
+</body>
+</html>
