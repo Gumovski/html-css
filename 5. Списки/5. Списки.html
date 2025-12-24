@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Списки - HTML и CSS</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Списки</h1>
+        
+        <p>В HTML существует три типа списков: маркированные, нумерованные и списки определений.</p>
+        
+        <h2>Маркированный список <code>&lt;ul&gt;</code></h2>
+        
+        <p>Маркированный список создаётся с помощью тега <code>&lt;ul&gt;</code> (unordered list). Каждый элемент списка оборачивается в тег <code>&lt;li&gt;</code> (list item).</p>
+        
+        <pre><code>&lt;ul&gt;
+    &lt;li&gt;Первый элемент&lt;/li&gt;
+    &lt;li&gt;Второй элемент&lt;/li&gt;
+    &lt;li&gt;Третий элемент&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+        <h2>Нумерованный список <code>&lt;ol&gt;</code></h2>
+        
+        <p>Нумерованный список создаётся с помощью тега <code>&lt;ol&gt;</code> (ordered list). Каждый элемент списка также оборачивается в тег <code>&lt;li&gt;</code>.</p>
+        
+        <h3>Атрибуты <code>&lt;ol&gt;</code></h3>
+        <div class="blockquote">
+            <ol>
+                <li><code>type</code><br>
+                    тип нумерации. Может принимать следующие значения:
+                    <ul>
+                        <li><code>1</code> - арабские цифры (по умолчанию)</li>
+                        <li><code>A</code> - заглавные латинские буквы</li>
+                        <li><code>a</code> - строчные латинские буквы</li>
+                        <li><code>I</code> - заглавные римские цифры</li>
+                        <li><code>i</code> - строчные римские цифры</li>
+                    </ul>
+                </li>
+                <li><code>start</code><br>
+                    начальное значение нумерации (число)</li>
+                <li><code>reversed</code><br>
+                    обратная нумерация (от большего к меньшему)</li>
+            </ol>
+        </div>
+
+        <pre><code>&lt;ol&gt;
+    &lt;li&gt;Первый элемент&lt;/li&gt;
+    &lt;li&gt;Второй элемент&lt;/li&gt;
+    &lt;li&gt;Третий элемент&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ol type="A"&gt;
+    &lt;li&gt;Элемент A&lt;/li&gt;
+    &lt;li&gt;Элемент B&lt;/li&gt;
+    &lt;li&gt;Элемент C&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ol start="5"&gt;
+    &lt;li&gt;Элемент 5&lt;/li&gt;
+    &lt;li&gt;Элемент 6&lt;/li&gt;
+    &lt;li&gt;Элемент 7&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ol reversed&gt;
+    &lt;li&gt;Элемент 3&lt;/li&gt;
+    &lt;li&gt;Элемент 2&lt;/li&gt;
+    &lt;li&gt;Элемент 1&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+        <h2>Список определений <code>&lt;dl&gt;</code></h2>
+        
+        <p>Список определений создаётся с помощью тега <code>&lt;dl&gt;</code> (definition list). Используется для представления пар термин-определение.</p>
+        
+        <div class="blockquote">
+            <ul>
+                <li><code>&lt;dt&gt;</code> (definition term) - термин</li>
+                <li><code>&lt;dd&gt;</code> (definition description) - определение термина</li>
+            </ul>
+        </div>
+
+        <pre><code>&lt;dl&gt;
+    &lt;dt&gt;HTML&lt;/dt&gt;
+    &lt;dd&gt;Язык разметки гипертекста&lt;/dd&gt;
+    
+    &lt;dt&gt;CSS&lt;/dt&gt;
+    &lt;dd&gt;Каскадные таблицы стилей&lt;/dd&gt;
+    
+    &lt;dt&gt;JavaScript&lt;/dt&gt;
+    &lt;dd&gt;Язык программирования для веб-разработки&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+
+        <h2>Вложенные списки</h2>
+        
+        <p>Списки могут быть вложенными друг в друга. Для этого внутри элемента <code>&lt;li&gt;</code> размещается новый список.</p>
+        
+        <pre><code>&lt;ul&gt;
+    &lt;li&gt;Фрукты
+        &lt;ul&gt;
+            &lt;li&gt;Яблоко&lt;/li&gt;
+            &lt;li&gt;Банан&lt;/li&gt;
+            &lt;li&gt;Апельсин&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Овощи
+        &lt;ul&gt;
+            &lt;li&gt;Морковь&lt;/li&gt;
+            &lt;li&gt;Помидор&lt;/li&gt;
+            &lt;li&gt;Огурец&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+        <h2>CSS-свойства для списков</h2>
+
+        <h3>Свойство <code>list-style-type</code></h3>
+        <p>Определяет тип маркера или нумерации для элементов списка.</p>
+        <div class="blockquote">
+            <p><strong>Возможные значения для маркированных списков:</strong></p>
+            <ul>
+                <li><code>disc</code> - закрашенный круг (по умолчанию)</li>
+                <li><code>circle</code> - незакрашенный круг</li>
+                <li><code>square</code> - квадрат</li>
+                <li><code>none</code> - без маркера</li>
+            </ul>
+            <p><strong>Возможные значения для нумерованных списков:</strong></p>
+            <ul>
+                <li><code>decimal</code> - арабские цифры (по умолчанию)</li>
+                <li><code>decimal-leading-zero</code> - арабские цифры с нулём впереди (01, 02, 03...)</li>
+                <li><code>lower-alpha</code> - строчные латинские буквы (a, b, c...)</li>
+                <li><code>upper-alpha</code> - заглавные латинские буквы (A, B, C...)</li>
+                <li><code>lower-roman</code> - строчные римские цифры (i, ii, iii...)</li>
+                <li><code>upper-roman</code> - заглавные римские цифры (I, II, III...)</li>
+                <li><code>lower-greek</code> - строчные греческие буквы (α, β, γ...)</li>
+                <li><code>none</code> - без нумерации</li>
+            </ul>
+        </div>
+        <pre><code>/* Маркированный список с квадратными маркерами */
+ul {
+    list-style-type: square;
+}
+
+/* Нумерованный список с римскими цифрами */
+ol {
+    list-style-type: upper-roman;
+}
+
+/* Список без маркеров */
+ul {
+    list-style-type: none;
+}</code></pre>
+
+        <h3>Свойство <code>list-style-position</code></h3>
+        <p>Определяет положение маркера относительно элемента списка.</p>
+        <div class="blockquote">
+            <p><strong>Возможные значения:</strong></p>
+            <ul>
+                <li><code>outside</code> - маркер находится за пределами блока элемента списка (по умолчанию)</li>
+                <li><code>inside</code> - маркер находится внутри блока элемента списка</li>
+            </ul>
+        </div>
+        <pre><code>/* Маркер внутри блока */
+ul {
+    list-style-position: inside;
+}
+
+/* Маркер снаружи блока */
+ul {
+    list-style-position: outside;
+}</code></pre>
+
+        <h3>Свойство <code>list-style-image</code></h3>
+        <p>Позволяет использовать изображение в качестве маркера списка.</p>
+        <div class="blockquote">
+            <p><strong>Возможные значения:</strong></p>
+            <ul>
+                <li><code>none</code> - без изображения (по умолчанию)</li>
+                <li><code>url(путь)</code> - путь к изображению</li>
+            </ul>
+        </div>
+        <pre><code>/* Использование изображения в качестве маркера */
+ul {
+    list-style-image: url('marker.png');
+}
+
+/* Отключение изображения */
+ul {
+    list-style-image: none;
+}</code></pre>
+
+        <h3>Свойство <code>list-style</code></h3>
+        <p>Короткая запись для одновременной установки <code>list-style-type</code>, <code>list-style-position</code> и <code>list-style-image</code>.</p>
+        <div class="blockquote">
+            <p><strong>Синтаксис:</strong></p>
+            <p><code>list-style: [type] [position] [image]</code></p>
+            <p>Порядок значений не имеет значения. Можно указать одно, два или все три значения.</p>
+        </div>
+        <pre><code>/* Полная запись */
+ul {
+    list-style: square inside url('marker.png');
+}
+
+/* Только тип маркера */
+ul {
+    list-style: circle;
+}
+
+/* Тип и позиция */
+ul {
+    list-style: decimal inside;
+}
+
+/* Удаление всех стилей списка */
+ul {
+    list-style: none;
+}</code></pre>
+
+        <h3>Дополнительные CSS-свойства</h3>
+        <p>Для более гибкой стилизации списков можно использовать другие CSS-свойства:</p>
+        
+        <pre><code>/* Отступы и интервалы */
+ul {
+    padding-left: 40px; /* отступ слева */
+    margin: 20px 0; /* внешние отступы */
+}
+
+li {
+    margin-bottom: 10px; /* отступ между элементами */
+    padding: 5px; /* внутренний отступ */
+}
+
+/* Стилизация с использованием псевдоэлементов */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li::before {
+    content: "→ "; /* пользовательский маркер */
+    color: #ff6600;
+    font-weight: bold;
+}
+
+/* Счётчики для кастомной нумерации */
+ol {
+    list-style: none;
+    counter-reset: custom-counter;
+}
+
+ol li {
+    counter-increment: custom-counter;
+}
+
+ol li::before {
+    content: counter(custom-counter) ". ";
+    color: #0066cc;
+    font-weight: bold;
+}</code></pre>
+
+    </div>
+</body>
+</html>

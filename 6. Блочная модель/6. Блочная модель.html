@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блочная модель - HTML и CSS</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Блочная модель (Box Model)</h1>
+        
+        <p>Каждый элемент на веб-странице представляет собой прямоугольный блок. Блочная модель CSS описывает, как рассчитываются размеры этого блока, включая его содержимое, отступы, рамки и поля.</p>
+
+        <p>Блочная модель состоит из четырех частей (от центра к краям):</p>
+        <ol>
+            <li><strong>Content</strong> (Содержимое) — текст, изображения и т.д.</li>
+            <li><strong>Padding</strong> (Внутренний отступ) — пространство вокруг содержимого.</li>
+            <li><strong>Border</strong> (Рамка) — граница вокруг внутреннего отступа.</li>
+            <li><strong>Margin</strong> (Внешний отступ) — пространство вокруг рамки, отделяющее элемент от других элементов.</li>
+        </ol>
+
+        <h2>Свойство <code>display</code></h2>
+        <p>Определяет, как элемент должен отображаться на странице и как он взаимодействует с другими элементами.</p>
+
+        <div class="blockquote">
+            <p><strong>Основные значения:</strong></p>
+            <ul>
+                <li><code>block</code> — блочный элемент. Занимает всю доступную ширину, начинается с новой строки. Можно задавать ширину и высоту. (Примеры: <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>).</li>
+                <li><code>inline</code> — строчный элемент. Занимает только необходимую ширину, не начинается с новой строки. Ширина и высота игнорируются (зависят от содержимого). Отступы (margin/padding) сверху и снизу могут работать некорректно. (Примеры: <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>).</li>
+                <li><code>inline-block</code> — блочно-строчный элемент. Располагается в строке как строчный элемент, но позволяет задавать ширину, высоту и отступы как блочный элемент.</li>
+                <li><code>none</code> — элемент полностью скрывается со страницы (не занимает места).</li>
+            </ul>
+        </div>
+        <pre><code>div {
+    display: block;
+}
+
+span {
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+}</code></pre>
+
+        <h2>Свойство <code>padding</code> (Внутренний отступ)</h2>
+        <p>Определяет пространство между содержимым элемента и его рамкой. Внутренний отступ является частью самого элемента (фон элемента распространяется на padding).</p>
+
+        <h3>Индивидуальные свойства</h3>
+        <div class="blockquote">
+            <ul>
+                <li><code>padding-top</code> — отступ сверху</li>
+                <li><code>padding-right</code> — отступ справа</li>
+                <li><code>padding-bottom</code> — отступ снизу</li>
+                <li><code>padding-left</code> — отступ слева</li>
+            </ul>
+        </div>
+
+        <h3>Сокращенная запись <code>padding</code></h3>
+        <p>Позволяет задать отступы для всех сторон сразу.</p>
+        <div class="blockquote">
+            <ul>
+                <li><code>padding: 10px;</code> — со всех 4 сторон 10px.</li>
+                <li><code>padding: 10px 20px;</code> — сверху и снизу 10px, слева и справа 20px.</li>
+                <li><code>padding: 10px 20px 30px;</code> — сверху 10px, слева и справа 20px, снизу 30px.</li>
+                <li><code>padding: 10px 20px 30px 40px;</code> — сверху 10px, справа 20px, снизу 30px, слева 40px (по часовой стрелке).</li>
+            </ul>
+        </div>
+
+        <h2>Свойство <code>border</code> (Рамка)</h2>
+        <p>Рамка располагается между внутренним (padding) и внешним (margin) отступами.</p>
+
+        <h3>1. Стиль рамки (обязательное свойство)</h3>
+        <p>Без указания стиля рамка не будет отображаться.</p>
+        <p><strong>Свойство:</strong> <code>border-style</code></p>
+        <p>Также существуют индивидуальные свойства: <code>border-top-style</code>, <code>border-right-style</code>, <code>border-bottom-style</code>, <code>border-left-style</code>.</p>
+        
+        <div class="blockquote">
+            <p><strong>Значения:</strong></p>
+            <ul>
+                <li><code>solid</code> — сплошная линия</li>
+                <li><code>dashed</code> — пунктирная линия</li>
+                <li><code>dotted</code> — точечная линия</li>
+                <li><code>double</code> — двойная линия</li>
+                <li><code>groove</code> — объемная вдавленная линия</li>
+                <li><code>ridge</code> — объемная выпуклая линия</li>
+                <li><code>inset</code> — создает эффект вдавленного блока</li>
+                <li><code>outset</code> — создает эффект выпуклого блока</li>
+                <li><code>none</code> — без рамки</li>
+                <li><code>hidden</code> — скрытая рамка</li>
+            </ul>
+        </div>
+
+        <h3>2. Ширина рамки</h3>
+        <p><strong>Свойство:</strong> <code>border-width</code></p>
+        <p>Индивидуальные свойства: <code>border-top-width</code>, <code>border-right-width</code>, <code>border-bottom-width</code>, <code>border-left-width</code>.</p>
+        <div class="blockquote">
+            <p>Можно задавать в пикселях (px), em, rem или ключевыми словами: <code>thin</code> (тонкая), <code>medium</code> (средняя), <code>thick</code> (толстая).</p>
+        </div>
+
+        <h3>3. Цвет рамки</h3>
+        <p><strong>Свойство:</strong> <code>border-color</code></p>
+        <p>Индивидуальные свойства: <code>border-top-color</code>, <code>border-right-color</code>, <code>border-bottom-color</code>, <code>border-left-color</code>.</p>
+        <p>Принимает любые цветовые значения (hex, rgb, имя цвета, transparent).</p>
+
+        <h3>Сокращенная запись <code>border</code></h3>
+        <p>Позволяет задать ширину, стиль и цвет одновременно (обычно для всех сторон).</p>
+        <pre><code>/* Синтаксис: width style color */
+.box {
+    border: 2px solid red;
+}</code></pre>
+
+        <p>Также есть сокращения для отдельных сторон:</p>
+        <ul>
+            <li><code>border-top</code></li>
+            <li><code>border-right</code></li>
+            <li><code>border-bottom</code></li>
+            <li><code>border-left</code></li>
+        </ul>
+        <pre><code>.box {
+    border-bottom: 1px dashed #333;
+}</code></pre>
+
+        <h3>Закругление углов <code>border-radius</code></h3>
+        <p>Свойство позволяет добавлять элементам закругленные углы.</p>
+        
+        <div class="blockquote">
+            <p><strong>Значения:</strong></p>
+            <ul>
+                <li><code>пиксели</code> (px) — радиус скругления в пикселях.</li>
+                <li><code>проценты</code> (%) — радиус скругления в процентах от размера элемента (50% для круга).</li>
+            </ul>
+        </div>
+
+        <p>Можно задавать скругление для каждого угла отдельно:</p>
+        <ul>
+            <li><code>border-top-left-radius</code> — верхний левый угол</li>
+            <li><code>border-top-right-radius</code> — верхний правый угол</li>
+            <li><code>border-bottom-right-radius</code> — нижний правый угол</li>
+            <li><code>border-bottom-left-radius</code> — нижний левый угол</li>
+        </ul>
+
+        <p><strong>Сокращенная запись:</strong></p>
+        <pre><code>/* Все углы 10px */
+.box {
+    border-radius: 10px;
+}
+
+/* Разные значения для углов */
+.box {
+    border-radius: 10px 20px 30px 40px; 
+    /* верх-лев, верх-прав, низ-прав, низ-лев */
+}
+
+/* Создание круга */
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}</code></pre>
+
+        <h2>Свойство <code>margin</code> (Внешний отступ)</h2>
+        <p>Создает пустое пространство вокруг элемента, за пределами его рамки. Фон элемента НЕ распространяется на margin (он всегда прозрачный).</p>
+
+        <h3>Индивидуальные свойства</h3>
+        <div class="blockquote">
+            <ul>
+                <li><code>margin-top</code> — отступ сверху</li>
+                <li><code>margin-right</code> — отступ справа</li>
+                <li><code>margin-bottom</code> — отступ снизу</li>
+                <li><code>margin-left</code> — отступ слева</li>
+            </ul>
+        </div>
+
+        <h3>Сокращенная запись <code>margin</code></h3>
+        <p>Работает аналогично padding.</p>
+        <div class="blockquote">
+            <ul>
+                <li><code>margin: 10px;</code> — со всех сторон 10px.</li>
+                <li><code>margin: 10px 20px;</code> — сверху/снизу 10px, слева/справа 20px.</li>
+                <li><code>margin: 0 auto;</code> — распространенный прием для центрирования блочного элемента по горизонтали (0 сверху/снизу, автоматически слева/справа).</li>
+            </ul>
+        </div>
+
+        <h3>Особенности margin</h3>
+        <ul>
+            <li><strong>Схлопывание (Collapsing):</strong> Вертикальные отступы соседних элементов могут объединяться. Итоговый отступ равен большему из двух, а не их сумме.</li>
+            <li><strong>Отрицательные значения:</strong> Margin может быть отрицательным, что позволяет сдвигать элементы или накладывать их друг на друга.</li>
+            <li><strong>Значение <code>auto</code>:</strong> Браузер автоматически рассчитывает отступ. Часто используется для горизонтального центрирования.</li>
+        </ul>
+        <pre><code>.centered {
+    width: 500px;
+    margin: 0 auto; /* Центрирование блока */
+}</code></pre>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+/*
+font-size       - размер текста
+list-style-type - стиль списка
+*/
+.list {
+    font-size: x-large;
+    list-style-type: cambodian;
+
+}

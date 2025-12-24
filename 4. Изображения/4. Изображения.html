@@ -75,6 +75,146 @@
     &lt;area shape="circle" coords="450,180,25" href="mars.html" alt="Марс"&gt;
 &lt;/map&gt;</code></pre>
 
+        <h2>CSS-свойства для изображений</h2>
+
+        <h3>Свойство <code>width</code></h3>
+        <p>Определяет ширину изображения.</p>
+        <div class="blockquote">
+            <p><strong>Возможные значения:</strong></p>
+            <ul>
+                <li><code>auto</code> - автоматическая ширина (по умолчанию)</li>
+                <li><code>пиксели</code> - ширина в пикселях (например, <code>300px</code>)</li>
+                <li><code>проценты</code> - ширина в процентах от родительского элемента (например, <code>50%</code>)</li>
+                <li><code>em</code>, <code>rem</code> - относительные единицы измерения</li>
+                <li><code>vw</code> - процент от ширины области просмотра (например, <code>50vw</code>)</li>
+            </ul>
+        </div>
+        <pre><code>img {
+    width: 300px;
+}
+
+img {
+    width: 50%;
+}</code></pre>
+
+        <h3>Свойство <code>height</code></h3>
+        <p>Определяет высоту изображения.</p>
+        <div class="blockquote">
+            <p><strong>Возможные значения:</strong></p>
+            <ul>
+                <li><code>auto</code> - автоматическая высота (по умолчанию)</li>
+                <li><code>пиксели</code> - высота в пикселях (например, <code>200px</code>)</li>
+                <li><code>проценты</code> - высота в процентах от родительского элемента (например, <code>50%</code>)</li>
+                <li><code>em</code>, <code>rem</code> - относительные единицы измерения</li>
+                <li><code>vh</code> - процент от высоты области просмотра (например, <code>50vh</code>)</li>
+            </ul>
+        </div>
+        <pre><code>img {
+    height: 200px;
+}
+
+img {
+    width: 400px;
+    height: auto; /* сохраняет пропорции */
+}</code></pre>
+
+        <h3>Свойство <code>clip-path</code></h3>
+        <p>Создаёт область отсечения, которая определяет, какая часть изображения должна быть видимой.</p>
+        <div class="blockquote">
+            <p><strong>Возможные значения:</strong></p>
+            <ul>
+                <li><code>none</code> - без отсечения (по умолчанию)</li>
+                <li><code>circle()</code> - круг. Синтаксис: <code>circle(радиус at x y)</code></li>
+                <li><code>ellipse()</code> - эллипс. Синтаксис: <code>ellipse(rx ry at x y)</code></li>
+                <li><code>polygon()</code> - многоугольник. Синтаксис: <code>polygon(x1 y1, x2 y2, x3 y3, ...)</code></li>
+                <li><code>inset()</code> - прямоугольник. Синтаксис: <code>inset(top right bottom left round border-radius)</code></li>
+                <li><code>url()</code> - путь к SVG-элементу <code>&lt;clipPath&gt;</code></li>
+            </ul>
+        </div>
+        <pre><code>/* Круг */
+img {
+    clip-path: circle(50%);
+}
+
+/* Круг с центром в определённой точке */
+img {
+    clip-path: circle(40% at 50% 50%);
+}
+
+/* Эллипс */
+img {
+    clip-path: ellipse(50% 30% at 50% 50%);
+}
+
+/* Многоугольник (треугольник) */
+img {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+/* Прямоугольник со скруглёнными углами */
+img {
+    clip-path: inset(10px 20px 30px 40px round 15px);
+}</code></pre>
+
+        <h3>Свойство <code>filter</code></h3>
+        <p>Применяет графические эффекты к изображению.</p>
+        <div class="blockquote">
+            <p><strong>Возможные значения (функции фильтров):</strong></p>
+            <ul>
+                <li><code>none</code> - без фильтра (по умолчанию)</li>
+                <li><code>blur(px)</code> - размытие. Значение: радиус размытия в пикселях</li>
+                <li><code>brightness(%)</code> - яркость. Значение: 0% (чёрный) до 100% (норма) и выше</li>
+                <li><code>contrast(%)</code> - контрастность. Значение: 0% (серый) до 100% (норма) и выше</li>
+                <li><code>grayscale(%)</code> - оттенки серого. Значение: 0% (норма) до 100% (полностью серое)</li>
+                <li><code>hue-rotate(deg)</code> - поворот оттенка. Значение: угол от 0deg до 360deg</li>
+                <li><code>invert(%)</code> - инверсия цветов. Значение: 0% (норма) до 100% (полная инверсия)</li>
+                <li><code>opacity(%)</code> - прозрачность. Значение: 0% (прозрачный) до 100% (непрозрачный)</li>
+                <li><code>saturate(%)</code> - насыщенность. Значение: 0% (ненасыщенный) до 100% (норма) и выше</li>
+                <li><code>sepia(%)</code> - эффект сепии. Значение: 0% (норма) до 100% (полная сепия)</li>
+                <li><code>drop-shadow()</code> - тень. Синтаксис: <code>drop-shadow(x y blur color)</code></li>
+            </ul>
+            <p><strong>Можно комбинировать несколько фильтров:</strong></p>
+        </div>
+        <pre><code>/* Размытие */
+img {
+    filter: blur(5px);
+}
+
+/* Увеличение яркости */
+img {
+    filter: brightness(150%);
+}
+
+/* Чёрно-белое изображение */
+img {
+    filter: grayscale(100%);
+}
+
+/* Поворот оттенка */
+img {
+    filter: hue-rotate(90deg);
+}
+
+/* Инверсия цветов */
+img {
+    filter: invert(100%);
+}
+
+/* Тень */
+img {
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+}
+
+/* Комбинация нескольких фильтров */
+img {
+    filter: brightness(110%) contrast(120%) saturate(130%);
+}
+
+/* Эффект сепии с увеличением контрастности */
+img {
+    filter: sepia(80%) contrast(110%);
+}</code></pre>
+
     </div>
 </body>
 </html>
