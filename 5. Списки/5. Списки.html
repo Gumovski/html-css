@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Списки - HTML и CSS</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <link href="../assets/css/prism.css" rel="stylesheet" />
 </head>
 <body>
     <div class="container">
@@ -16,11 +17,17 @@
         
         <p>Маркированный список создаётся с помощью тега <code>&lt;ul&gt;</code> (unordered list). Каждый элемент списка оборачивается в тег <code>&lt;li&gt;</code> (list item).</p>
         
-        <pre><code>&lt;ul&gt;
-    &lt;li&gt;Первый элемент&lt;/li&gt;
-    &lt;li&gt;Второй элемент&lt;/li&gt;
-    &lt;li&gt;Третий элемент&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-html">
+                    &lt;ul&gt;
+                        &lt;li&gt;Первый элемент&lt;/li&gt;
+                        &lt;li&gt;Второй элемент&lt;/li&gt;
+                        &lt;li&gt;Третий элемент&lt;/li&gt;
+                    &lt;/ul&gt;
+                </code>
+            </pre>
+        </div>
 
         <h2>Нумерованный список <code>&lt;ol&gt;</code></h2>
         
@@ -46,29 +53,35 @@
             </ol>
         </div>
 
-        <pre><code>&lt;ol&gt;
-    &lt;li&gt;Первый элемент&lt;/li&gt;
-    &lt;li&gt;Второй элемент&lt;/li&gt;
-    &lt;li&gt;Третий элемент&lt;/li&gt;
-&lt;/ol&gt;
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-html">
+                    &lt;ol&gt;
+                        &lt;li&gt;Первый элемент&lt;/li&gt;
+                        &lt;li&gt;Второй элемент&lt;/li&gt;
+                        &lt;li&gt;Третий элемент&lt;/li&gt;
+                    &lt;/ol&gt;
 
-&lt;ol type="A"&gt;
-    &lt;li&gt;Элемент A&lt;/li&gt;
-    &lt;li&gt;Элемент B&lt;/li&gt;
-    &lt;li&gt;Элемент C&lt;/li&gt;
-&lt;/ol&gt;
+                    &lt;ol type="A"&gt;
+                        &lt;li&gt;Элемент A&lt;/li&gt;
+                        &lt;li&gt;Элемент B&lt;/li&gt;
+                        &lt;li&gt;Элемент C&lt;/li&gt;
+                    &lt;/ol&gt;
 
-&lt;ol start="5"&gt;
-    &lt;li&gt;Элемент 5&lt;/li&gt;
-    &lt;li&gt;Элемент 6&lt;/li&gt;
-    &lt;li&gt;Элемент 7&lt;/li&gt;
-&lt;/ol&gt;
+                    &lt;ol start="5"&gt;
+                        &lt;li&gt;Элемент 5&lt;/li&gt;
+                        &lt;li&gt;Элемент 6&lt;/li&gt;
+                        &lt;li&gt;Элемент 7&lt;/li&gt;
+                    &lt;/ol&gt;
 
-&lt;ol reversed&gt;
-    &lt;li&gt;Элемент 3&lt;/li&gt;
-    &lt;li&gt;Элемент 2&lt;/li&gt;
-    &lt;li&gt;Элемент 1&lt;/li&gt;
-&lt;/ol&gt;</code></pre>
+                    &lt;ol reversed&gt;
+                        &lt;li&gt;Элемент 3&lt;/li&gt;
+                        &lt;li&gt;Элемент 2&lt;/li&gt;
+                        &lt;li&gt;Элемент 1&lt;/li&gt;
+                    &lt;/ol&gt;
+                </code>
+            </pre>
+        </div>
 
         <h2>Список определений <code>&lt;dl&gt;</code></h2>
         
@@ -81,37 +94,49 @@
             </ul>
         </div>
 
-        <pre><code>&lt;dl&gt;
-    &lt;dt&gt;HTML&lt;/dt&gt;
-    &lt;dd&gt;Язык разметки гипертекста&lt;/dd&gt;
-    
-    &lt;dt&gt;CSS&lt;/dt&gt;
-    &lt;dd&gt;Каскадные таблицы стилей&lt;/dd&gt;
-    
-    &lt;dt&gt;JavaScript&lt;/dt&gt;
-    &lt;dd&gt;Язык программирования для веб-разработки&lt;/dd&gt;
-&lt;/dl&gt;</code></pre>
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-html">
+                    &lt;dl&gt;
+                        &lt;dt&gt;HTML&lt;/dt&gt;
+                        &lt;dd&gt;Язык разметки гипертекста&lt;/dd&gt;
+
+                        &lt;dt&gt;CSS&lt;/dt&gt;
+                        &lt;dd&gt;Каскадные таблицы стилей&lt;/dd&gt;
+
+                        &lt;dt&gt;JavaScript&lt;/dt&gt;
+                        &lt;dd&gt;Язык программирования для веб-разработки&lt;/dd&gt;
+                    &lt;/dl&gt;
+                </code>
+            </pre>
+        </div>
 
         <h2>Вложенные списки</h2>
         
         <p>Списки могут быть вложенными друг в друга. Для этого внутри элемента <code>&lt;li&gt;</code> размещается новый список.</p>
         
-        <pre><code>&lt;ul&gt;
-    &lt;li&gt;Фрукты
-        &lt;ul&gt;
-            &lt;li&gt;Яблоко&lt;/li&gt;
-            &lt;li&gt;Банан&lt;/li&gt;
-            &lt;li&gt;Апельсин&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/li&gt;
-    &lt;li&gt;Овощи
-        &lt;ul&gt;
-            &lt;li&gt;Морковь&lt;/li&gt;
-            &lt;li&gt;Помидор&lt;/li&gt;
-            &lt;li&gt;Огурец&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-html">
+                    &lt;ul&gt;
+                        &lt;li&gt;Фрукты
+                            &lt;ul&gt;
+                                &lt;li&gt;Яблоко&lt;/li&gt;
+                                &lt;li&gt;Банан&lt;/li&gt;
+                                &lt;li&gt;Апельсин&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;Овощи
+                            &lt;ul&gt;
+                                &lt;li&gt;Морковь&lt;/li&gt;
+                                &lt;li&gt;Помидор&lt;/li&gt;
+                                &lt;li&gt;Огурец&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                </code>
+            </pre>
+        </div>
 
         <h2>CSS-свойства для списков</h2>
 
@@ -137,20 +162,26 @@
                 <li><code>none</code> - без нумерации</li>
             </ul>
         </div>
-        <pre><code>/* Маркированный список с квадратными маркерами */
-ul {
-    list-style-type: square;
-}
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-css">
+                    /* Маркированный список с квадратными маркерами */
+                    ul {
+                        list-style-type: square;
+                    }
 
-/* Нумерованный список с римскими цифрами */
-ol {
-    list-style-type: upper-roman;
-}
+                    /* Нумерованный список с римскими цифрами */
+                    ol {
+                        list-style-type: upper-roman;
+                    }
 
-/* Список без маркеров */
-ul {
-    list-style-type: none;
-}</code></pre>
+                    /* Список без маркеров */
+                    ul {
+                        list-style-type: none;
+                    }
+                </code>
+            </pre>
+        </div>
 
         <h3>Свойство <code>list-style-position</code></h3>
         <p>Определяет положение маркера относительно элемента списка.</p>
@@ -161,15 +192,21 @@ ul {
                 <li><code>inside</code> - маркер находится внутри блока элемента списка</li>
             </ul>
         </div>
-        <pre><code>/* Маркер внутри блока */
-ul {
-    list-style-position: inside;
-}
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-css">
+                    /* Маркер внутри блока */
+                    ul {
+                        list-style-position: inside;
+                    }
 
-/* Маркер снаружи блока */
-ul {
-    list-style-position: outside;
-}</code></pre>
+                    /* Маркер снаружи блока */
+                    ul {
+                        list-style-position: outside;
+                    }
+                </code>
+            </pre>
+        </div>
 
         <h3>Свойство <code>list-style-image</code></h3>
         <p>Позволяет использовать изображение в качестве маркера списка.</p>
@@ -180,15 +217,21 @@ ul {
                 <li><code>url(путь)</code> - путь к изображению</li>
             </ul>
         </div>
-        <pre><code>/* Использование изображения в качестве маркера */
-ul {
-    list-style-image: url('marker.png');
-}
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-css">
+                    /* Использование изображения в качестве маркера */
+                    ul {
+                        list-style-image: url('marker.png');
+                    }
 
-/* Отключение изображения */
-ul {
-    list-style-image: none;
-}</code></pre>
+                    /* Отключение изображения */
+                    ul {
+                        list-style-image: none;
+                    }
+                </code>
+            </pre>
+        </div>
 
         <h3>Свойство <code>list-style</code></h3>
         <p>Короткая запись для одновременной установки <code>list-style-type</code>, <code>list-style-position</code> и <code>list-style-image</code>.</p>
@@ -197,68 +240,81 @@ ul {
             <p><code>list-style: [type] [position] [image]</code></p>
             <p>Порядок значений не имеет значения. Можно указать одно, два или все три значения.</p>
         </div>
-        <pre><code>/* Полная запись */
-ul {
-    list-style: square inside url('marker.png');
-}
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-css">
+                    /* Полная запись */
+                    ul {
+                        list-style: square inside url('marker.png');
+                    }
 
-/* Только тип маркера */
-ul {
-    list-style: circle;
-}
+                    /* Только тип маркера */
+                    ul {
+                        list-style: circle;
+                    }
 
-/* Тип и позиция */
-ul {
-    list-style: decimal inside;
-}
+                    /* Тип и позиция */
+                    ul {
+                        list-style: decimal inside;
+                    }
 
-/* Удаление всех стилей списка */
-ul {
-    list-style: none;
-}</code></pre>
+                    /* Удаление всех стилей списка */
+                    ul {
+                        list-style: none;
+                    }
+                </code>
+            </pre>
+        </div>
 
         <h3>Дополнительные CSS-свойства</h3>
         <p>Для более гибкой стилизации списков можно использовать другие CSS-свойства:</p>
         
-        <pre><code>/* Отступы и интервалы */
-ul {
-    padding-left: 40px; /* отступ слева */
-    margin: 20px 0; /* внешние отступы */
-}
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-css">
+                    /* Отступы и интервалы */
+                    ul {
+                        padding-left: 40px; /* отступ слева */
+                        margin: 20px 0; /* внешние отступы */
+                    }
 
-li {
-    margin-bottom: 10px; /* отступ между элементами */
-    padding: 5px; /* внутренний отступ */
-}
+                    li {
+                        margin-bottom: 10px; /* отступ между элементами */
+                        padding: 5px; /* внутренний отступ */
+                    }
 
-/* Стилизация с использованием псевдоэлементов */
-ul {
-    list-style: none;
-    padding-left: 0;
-}
+                    /* Стилизация с использованием псевдоэлементов */
+                    ul {
+                        list-style: none;
+                        padding-left: 0;
+                    }
 
-li::before {
-    content: "→ "; /* пользовательский маркер */
-    color: #ff6600;
-    font-weight: bold;
-}
+                    li::before {
+                        content: "→ "; /* пользовательский маркер */
+                        color: #ff6600;
+                        font-weight: bold;
+                    }
 
-/* Счётчики для кастомной нумерации */
-ol {
-    list-style: none;
-    counter-reset: custom-counter;
-}
+                    /* Счётчики для кастомной нумерации */
+                    ol {
+                        list-style: none;
+                        counter-reset: custom-counter;
+                    }
 
-ol li {
-    counter-increment: custom-counter;
-}
+                    ol li {
+                        counter-increment: custom-counter;
+                    }
 
-ol li::before {
-    content: counter(custom-counter) ". ";
-    color: #0066cc;
-    font-weight: bold;
-}</code></pre>
+                    ol li::before {
+                        content: counter(custom-counter) ". ";
+                        color: #0066cc;
+                        font-weight: bold;
+                    }
+                </code>
+            </pre>
+        </div>
 
     </div>
+    <script src="../assets/js/prism.js"></script>
 </body>
 </html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Блочная модель - HTML и CSS</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <link href="../assets/css/prism.css" rel="stylesheet" />
 </head>
 <body>
     <div class="container">
@@ -32,15 +33,21 @@
                 <li><code>none</code> — элемент полностью скрывается со страницы (не занимает места).</li>
             </ul>
         </div>
-        <pre><code>div {
-    display: block;
-}
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-css">
+                    div {
+                        display: block;
+                    }
 
-span {
-    display: inline-block;
-    width: 100px;
-    height: 50px;
-}</code></pre>
+                    span {
+                        display: inline-block;
+                        width: 100px;
+                        height: 50px;
+                    }
+                </code>
+            </pre>
+        </div>
 
         <h2>Свойство <code>padding</code> (Внутренний отступ)</h2>
         <p>Определяет пространство между содержимым элемента и его рамкой. Внутренний отступ является частью самого элемента (фон элемента распространяется на padding).</p>
@@ -104,10 +111,16 @@ span {
 
         <h3>Сокращенная запись <code>border</code></h3>
         <p>Позволяет задать ширину, стиль и цвет одновременно (обычно для всех сторон).</p>
-        <pre><code>/* Синтаксис: width style color */
-.box {
-    border: 2px solid red;
-}</code></pre>
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-css">
+                    /* Синтаксис: width style color */
+                    .box {
+                        border: 2px solid red;
+                    }
+                </code>
+            </pre>
+        </div>
 
         <p>Также есть сокращения для отдельных сторон:</p>
         <ul>
@@ -116,9 +129,15 @@ span {
             <li><code>border-bottom</code></li>
             <li><code>border-left</code></li>
         </ul>
-        <pre><code>.box {
-    border-bottom: 1px dashed #333;
-}</code></pre>
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-css">
+                    .box {
+                        border-bottom: 1px dashed #333;
+                    }
+                </code>
+            </pre>
+        </div>
 
         <h3>Закругление углов <code>border-radius</code></h3>
         <p>Свойство позволяет добавлять элементам закругленные углы.</p>
@@ -140,23 +159,29 @@ span {
         </ul>
 
         <p><strong>Сокращенная запись:</strong></p>
-        <pre><code>/* Все углы 10px */
-.box {
-    border-radius: 10px;
-}
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-css">
+                    /* Все углы 10px */
+                    .box {
+                        border-radius: 10px;
+                    }
 
-/* Разные значения для углов */
-.box {
-    border-radius: 10px 20px 30px 40px; 
-    /* верх-лев, верх-прав, низ-прав, низ-лев */
-}
+                    /* Разные значения для углов */
+                    .box {
+                        border-radius: 10px 20px 30px 40px;
+                        /* верх-лев, верх-прав, низ-прав, низ-лев */
+                    }
 
-/* Создание круга */
-.circle {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-}</code></pre>
+                    /* Создание круга */
+                    .circle {
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                    }
+                </code>
+            </pre>
+        </div>
 
         <h2>Свойство <code>margin</code> (Внешний отступ)</h2>
         <p>Создает пустое пространство вокруг элемента, за пределами его рамки. Фон элемента НЕ распространяется на margin (он всегда прозрачный).</p>
@@ -187,11 +212,18 @@ span {
             <li><strong>Отрицательные значения:</strong> Margin может быть отрицательным, что позволяет сдвигать элементы или накладывать их друг на друга.</li>
             <li><strong>Значение <code>auto</code>:</strong> Браузер автоматически рассчитывает отступ. Часто используется для горизонтального центрирования.</li>
         </ul>
-        <pre><code>.centered {
-    width: 500px;
-    margin: 0 auto; /* Центрирование блока */
-}</code></pre>
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-css">
+                    .centered {
+                        width: 500px;
+                        margin: 0 auto; /* Центрирование блока */
+                    }
+                </code>
+            </pre>
+        </div>
 
     </div>
+    <script src="../assets/js/prism.js"></script>
 </body>
 </html>

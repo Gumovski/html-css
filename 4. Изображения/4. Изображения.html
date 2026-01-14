@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Изображения - HTML и CSS</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <link href="../assets/css/prism.css" rel="stylesheet" />
 </head>
 <body>
     <div class="container">
@@ -26,7 +27,13 @@
             </ol>
         </div>
 
-        <pre><code>&lt;img src="image.png" alt="Изображение"&gt;</code></pre>
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-html">
+                    &lt;img src="image.png" alt="Изображение"&gt;
+                </code>
+            </pre>
+        </div>
 
         <h2>Карта изображения <code>&lt;map&gt;</code></h2>
         
@@ -34,10 +41,16 @@
         
         <p>Карта изображения состоит из элементов <code>&lt;area&gt;</code>.</p>
         
-        <pre><code>&lt;img src="url" usemap="#имя_карты"&gt;
-&lt;map name="имя_карты"&gt;
-...
-&lt;/map&gt;</code></pre>
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-html">
+                    &lt;img src="url" usemap="#имя_карты"&gt;
+                    &lt;map name="имя_карты"&gt;
+                    ...
+                    &lt;/map&gt;
+                </code>
+            </pre>
+        </div>
 
         <h3>Атрибуты элемента <code>&lt;area&gt;</code></h3>
         <div class="blockquote">
@@ -65,15 +78,21 @@
             </ol>
         </div>
 
-        <pre><code>&lt;img src="solar_system.jpg" alt="Солнечная система" usemap="#planetmap"&gt;
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-html">
+                    &lt;img src="solar_system.jpg" alt="Солнечная система" usemap="#planetmap"&gt;
 
-&lt;map name="planetmap"&gt;
-    &lt;area shape="circle" coords="180,180,60" href="sun.html" alt="Солнце"&gt;
-    &lt;area shape="circle" coords="270,190,20" href="mercury.html" alt="Меркурий"&gt;
-    &lt;area shape="circle" coords="330,185,30" href="venus.html" alt="Венера"&gt;
-    &lt;area shape="circle" coords="390,185,35" href="earth.html" alt="Земля"&gt;
-    &lt;area shape="circle" coords="450,180,25" href="mars.html" alt="Марс"&gt;
-&lt;/map&gt;</code></pre>
+                    &lt;map name="planetmap"&gt;
+                        &lt;area shape="circle" coords="180,180,60" href="sun.html" alt="Солнце"&gt;
+                        &lt;area shape="circle" coords="270,190,20" href="mercury.html" alt="Меркурий"&gt;
+                        &lt;area shape="circle" coords="330,185,30" href="venus.html" alt="Венера"&gt;
+                        &lt;area shape="circle" coords="390,185,35" href="earth.html" alt="Земля"&gt;
+                        &lt;area shape="circle" coords="450,180,25" href="mars.html" alt="Марс"&gt;
+                    &lt;/map&gt;
+                </code>
+            </pre>
+        </div>
 
         <h2>CSS-свойства для изображений</h2>
 
@@ -89,13 +108,19 @@
                 <li><code>vw</code> - процент от ширины области просмотра (например, <code>50vw</code>)</li>
             </ul>
         </div>
-        <pre><code>img {
-    width: 300px;
-}
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-css">
+                    img {
+                        width: 300px;
+                    }
 
-img {
-    width: 50%;
-}</code></pre>
+                    img {
+                        width: 50%;
+                    }
+                </code>
+            </pre>
+        </div>
 
         <h3>Свойство <code>height</code></h3>
         <p>Определяет высоту изображения.</p>
@@ -109,14 +134,20 @@ img {
                 <li><code>vh</code> - процент от высоты области просмотра (например, <code>50vh</code>)</li>
             </ul>
         </div>
-        <pre><code>img {
-    height: 200px;
-}
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-css">
+                    img {
+                        height: 200px;
+                    }
 
-img {
-    width: 400px;
-    height: auto; /* сохраняет пропорции */
-}</code></pre>
+                    img {
+                        width: 400px;
+                        height: auto; /* сохраняет пропорции */
+                    }
+                </code>
+            </pre>
+        </div>
 
         <h3>Свойство <code>clip-path</code></h3>
         <p>Создаёт область отсечения, которая определяет, какая часть изображения должна быть видимой.</p>
@@ -131,30 +162,36 @@ img {
                 <li><code>url()</code> - путь к SVG-элементу <code>&lt;clipPath&gt;</code></li>
             </ul>
         </div>
-        <pre><code>/* Круг */
-img {
-    clip-path: circle(50%);
-}
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-css">
+                    /* Круг */
+                    img {
+                        clip-path: circle(50%);
+                    }
 
-/* Круг с центром в определённой точке */
-img {
-    clip-path: circle(40% at 50% 50%);
-}
+                    /* Круг с центром в определённой точке */
+                    img {
+                        clip-path: circle(40% at 50% 50%);
+                    }
 
-/* Эллипс */
-img {
-    clip-path: ellipse(50% 30% at 50% 50%);
-}
+                    /* Эллипс */
+                    img {
+                        clip-path: ellipse(50% 30% at 50% 50%);
+                    }
 
-/* Многоугольник (треугольник) */
-img {
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-}
+                    /* Многоугольник (треугольник) */
+                    img {
+                        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+                    }
 
-/* Прямоугольник со скруглёнными углами */
-img {
-    clip-path: inset(10px 20px 30px 40px round 15px);
-}</code></pre>
+                    /* Прямоугольник со скруглёнными углами */
+                    img {
+                        clip-path: inset(10px 20px 30px 40px round 15px);
+                    }
+                </code>
+            </pre>
+        </div>
 
         <h3>Свойство <code>filter</code></h3>
         <p>Применяет графические эффекты к изображению.</p>
@@ -175,46 +212,52 @@ img {
             </ul>
             <p><strong>Можно комбинировать несколько фильтров:</strong></p>
         </div>
-        <pre><code>/* Размытие */
-img {
-    filter: blur(5px);
-}
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-css">
+                    /* Размытие */
+                    img {
+                        filter: blur(5px);
+                    }
 
-/* Увеличение яркости */
-img {
-    filter: brightness(150%);
-}
+                    /* Увеличение яркости */
+                    img {
+                        filter: brightness(150%);
+                    }
 
-/* Чёрно-белое изображение */
-img {
-    filter: grayscale(100%);
-}
+                    /* Чёрно-белое изображение */
+                    img {
+                        filter: grayscale(100%);
+                    }
 
-/* Поворот оттенка */
-img {
-    filter: hue-rotate(90deg);
-}
+                    /* Поворот оттенка */
+                    img {
+                        filter: hue-rotate(90deg);
+                    }
 
-/* Инверсия цветов */
-img {
-    filter: invert(100%);
-}
+                    /* Инверсия цветов */
+                    img {
+                        filter: invert(100%);
+                    }
 
-/* Тень */
-img {
-    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
-}
+                    /* Тень */
+                    img {
+                        filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+                    }
 
-/* Комбинация нескольких фильтров */
-img {
-    filter: brightness(110%) contrast(120%) saturate(130%);
-}
+                    /* Комбинация нескольких фильтров */
+                    img {
+                        filter: brightness(110%) contrast(120%) saturate(130%);
+                    }
 
-/* Эффект сепии с увеличением контрастности */
-img {
-    filter: sepia(80%) contrast(110%);
-}</code></pre>
-
+                    /* Эффект сепии с увеличением контрастности */
+                    img {
+                        filter: sepia(80%) contrast(110%);
+                    }
+                </code>
+            </pre>
+        </div>
     </div>
+    <script src="../assets/js/prism.js"></script>
 </body>
 </html>

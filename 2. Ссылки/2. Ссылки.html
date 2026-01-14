@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ссылки - HTML и CSS</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <link href="../assets/css/prism.css" rel="stylesheet" />
 </head>
 <body>
     <div class="container">
@@ -30,19 +31,31 @@
             Добавляет к ссылке всплывающую подсказку.</p>
         </div>
 
-        <pre><code>&lt;p&gt;Баскетбол входит в программу &lt;a href="olympic.html"&gt;Олимпийских игр&lt;/a&gt; с 1936 года (изобретатель игры
-&lt;a title="Страница в википедии" target="_blank" href="https://ru.wikipedia.org/wiki/Нейсмит,_Джеймс"&gt;Джеймс Нейсмит&lt;/a&gt;
-был там в качестве гостя).
-Регулярные чемпионаты мира по баскетболу среди мужчин проводятся с 1950 года, среди женщин — с 1953 года,
-а чемпионаты Европы — с 1935 года.&lt;/p&gt;</code></pre>
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-html">
+                    &lt;p&gt;Баскетбол входит в программу &lt;a href="olympic.html"&gt;Олимпийских игр&lt;/a&gt;
+                    с 1936 года (изобретатель игры &lt;a title="Страница в википедии" target="_blank"
+                    href="https://ru.wikipedia.org/wiki/Нейсмит,_Джеймс"&gt;Джеймс Нейсмит&lt;/a&gt; был там в
+                    качестве гостя). Регулярные чемпионаты мира по баскетболу среди мужчин проводятся с
+                    1950 года, среди женщин — с 1953 года, а чемпионаты Европы — с 1935 года.&lt;/p&gt;
+                </code>
+            </pre>
+        </div>
         
         <h2>Переход внутри документа</h2>
         
         <p>Для перехода внутри документа используется якорь - элемент помеченый атрибутом <code>id</code>.<br>
         Для перехода по якорям в атрибуте <code>href</code> указывают <code>#id</code>.</p>
         
-        <pre><code>&lt;a href="#about"&gt;&lt;/a&gt;
-&lt;h1 id="about"&gt;&lt;/h1&gt;</code></pre>
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-html">
+                    &lt;a href="#about"&gt;&lt;/a&gt;
+                    &lt;h1 id="about"&gt;&lt;/h1&gt;
+                </code>
+            </pre>
+        </div>
         
         <hr>
         
@@ -72,5 +85,6 @@
         </div>
     </div>
 
+    <script src="../assets/js/prism.js"></script>
 </body>
 </html>

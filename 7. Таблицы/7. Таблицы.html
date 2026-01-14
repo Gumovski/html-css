@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблицы - HTML и CSS</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link href="../assets/css/prism.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <h1>Таблицы</h1>
+        
+        <p>HTML-таблицы позволяют организовывать данные (текст, изображения, ссылки) в виде строк и столбцов.</p>
+        
+        <p>Для создания таблицы используется тег <code>&lt;table&gt;</code>.</p>
+        
+        <h3>Основные теги таблицы</h3>
+        <div class="blockquote">
+            <ul>
+                <li><code>&lt;table&gt;</code> - контейнер для всей таблицы.</li>
+                <li><code>&lt;tr&gt;</code> (Table Row) - строка таблицы.</li>
+                <li><code>&lt;td&gt;</code> (Table Data) - ячейка данных (обычная ячейка).</li>
+                <li><code>&lt;th&gt;</code> (Table Header) - заголовочная ячейка (обычно жирный шрифт и по центру).</li>
+            </ul>
+        </div>
+
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-html">
+                    &lt;table&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;Имя&lt;/th&gt;
+                            &lt;th&gt;Возраст&lt;/th&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Алексей&lt;/td&gt;
+                            &lt;td&gt;25&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Мария&lt;/td&gt;
+                            &lt;td&gt;30&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/table&gt;
+                </code>
+            </pre>
+        </div>
+
+        <h2>Группировка содержимого</h2>
+        
+        <p>Для лучшей семантики и стилизации таблицу можно разделить на части:</p>
+        
+        <div class="blockquote">
+            <ul>
+                <li><code>&lt;thead&gt;</code> - заголовок таблицы (шапка).</li>
+                <li><code>&lt;tbody&gt;</code> - основное содержимое (тело).</li>
+                <li><code>&lt;tfoot&gt;</code> - подвал таблицы (итоги).</li>
+                <li><code>&lt;caption&gt;</code> - название таблицы (пишется сразу после открывающего тега <code>&lt;table&gt;</code>).</li>
+            </ul>
+        </div>
+
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-html">
+                    &lt;table&gt;
+                        &lt;caption&gt;Список сотрудников&lt;/caption&gt;
+                        &lt;thead&gt;
+                            &lt;tr&gt;
+                                &lt;th&gt;Отдел&lt;/th&gt;
+                                &lt;th&gt;Имя&lt;/th&gt;
+                            &lt;/tr&gt;
+                        &lt;/thead&gt;
+                        &lt;tbody&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;IT&lt;/td&gt;
+                                &lt;td&gt;Иван&lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                        &lt;tfoot&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;Всего&lt;/td&gt;
+                                &lt;td&gt;1 сотрудник&lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/tfoot&gt;
+                    &lt;/table&gt;
+                </code>
+            </pre>
+        </div>
+
+        <h2>Объединение ячеек</h2>
+        
+        <p>Для объединения ячеек используются атрибуты:</p>
+        
+        <div class="blockquote">
+            <ul>
+                <li><code>colspan="n"</code> - объединяет <code>n</code> столбцов (по горизонтали).</li>
+                <li><code>rowspan="n"</code> - объединяет <code>n</code> строк (по вертикали).</li>
+            </ul>
+        </div>
+
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-html">
+                    &lt;table&gt;
+                        &lt;tr&gt;
+                            &lt;th colspan="2"&gt;Заголовок на 2 столбца&lt;/th&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td rowspan="2"&gt;Ячейка на 2 строки&lt;/td&gt;
+                            &lt;td&gt;Обычная ячейка&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Обычная ячейка&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/table&gt;
+                </code>
+            </pre>
+        </div>
+
+        <h2>CSS-свойства для таблиц</h2>
+
+        <h3>Границы таблицы</h3>
+        
+        <p>По умолчанию таблицы отображаются без границ (или с двойными границами в старых браузерах).</p>
+
+        <div class="blockquote">
+            <ul>
+                <li><code>border</code> - задаёт рамку для <code>table</code>, <code>th</code> и <code>td</code>.</li>
+                <li><code>border-collapse</code> - управляет отображением границ соседних ячеек.
+                    <ul>
+                        <li><code>collapse</code> - границы схлопываются в одну.</li>
+                        <li><code>separate</code> - границы разделены (по умолчанию).</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-css">
+                    /* Стандартный стиль таблицы */
+                    table {
+                        width: 100%;
+                        border-collapse: collapse; /* Убирает двойные линии */
+                    }
+                    
+                    th, td {
+                        border: 1px solid #ddd; /* Тонкая серая рамка */
+                        padding: 8px; /* Внутренний отступ */
+                    }
+                </code>
+            </pre>
+        </div>
+
+        <h3>Отступы и выравнивание</h3>
+
+        <div class="blockquote">
+            <ul>
+                <li><code>padding</code> - внутренний отступ внутри ячеек (задаётся для <code>th</code> и <code>td</code>).</li>
+                <li><code>text-align</code> - горизонтальное выравнивание текста (<code>left</code>, <code>center</code>, <code>right</code>).</li>
+                <li><code>vertical-align</code> - вертикальное выравнивание (<code>top</code>, <code>middle</code>, <code>bottom</code>).</li>
+            </ul>
+        </div>
+
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-css">
+                    th {
+                        text-align: left; /* Выравнивание по левому краю */
+                        padding-top: 12px;
+                        padding-bottom: 12px;
+                        background-color: #4CAF50; /* Зелёный фон */
+                        color: white; /* Белый текст */
+                    }
+                    
+                    td {
+                        text-align: center; /* Текст по центру */
+                        vertical-align: middle; /* По вертикали по центру */
+                    }
+                </code>
+            </pre>
+        </div>
+
+        <h3>Полосатые таблицы и ховер-эффект</h3>
+        
+        <p>Используйте псевдоклассы для улучшения читаемости.</p>
+
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-css">
+                    /* Чётные строки серые */
+                    tr:nth-child(even) {
+                        background-color: #f2f2f2;
+                    }
+
+                    /* Подсветка строки при наведении */
+                    tr:hover {
+                        background-color: #ddd;
+                    }
+                </code>
+            </pre>
+        </div>
+
+        <h3>Адаптивность таблиц</h3>
+        
+        <p>Таблицы плохо масштабируются на мобильных устройствах. Для решения этой проблемы таблицу часто оборачивают в контейнер с прокруткой.</p>
+
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-css">
+                    .table-container {
+                        overflow-x: auto; /* Горизонтальная прокрутка если не влезает */
+                    }
+                </code>
+            </pre>
+        </div>
+        
+    </div>
+    <script src="../assets/js/prism.js"></script>
+</body>
+</html>

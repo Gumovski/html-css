@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Стили - HTML и CSS</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <link href="../assets/css/prism.css" rel="stylesheet" />
 </head>
 <body>
     <div class="container">
@@ -20,44 +21,78 @@
         </ol>
 
         <h2>Внутри тега элемента</h2>
-        <pre><code>&lt;p style="color: darkorchid; font-size: x-large"&gt; — спортивная командная игра с мячом, в которой мяч забрасывают руками в кольцо соперника.&lt;/p&gt;</code></pre>
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-html">
+                    &lt;p style="color: darkorchid; font-size: x-large"&gt; — спортивная командная
+                    игра с мячом, в которой мяч забрасывают руками в кольцо соперника.&lt;/p&gt;
+                </code>
+            </pre>
+        </div>
         <p>Стили отделяются друг от друга <code>;</code>.</p>
 
         <h2>На странице в теге <code>&lt;style&gt;</code></h2>
-        <pre><code>&lt;head&gt;
-    ...
-    &lt;style&gt;
-        .main-definition {
-            color: blue;
-        }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;h1&gt;Баскетбол&lt;/h1&gt;
-&lt;p class="main-definition"&gt; — спортивная командная игра с мячом, в которой мяч забрасывают руками в кольцо соперника.&lt;/p&gt;
-...</code></pre>
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-html">
+                    &lt;head&gt;
+                    ...
+                    &lt;style&gt;
+                        .main-definition {
+                            color: blue;
+                        }
+                    &lt;/style&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                    &lt;h1&gt;Баскетбол&lt;/h1&gt;
+                    &lt;p class="main-definition"&gt; — спортивная командная игра с мячом, в которой мяч
+                        забрасывают руками в кольцо соперника.&lt;/p&gt;
+                    ...
+                </code>
+            </pre>
+        </div>
 
         <h2>В файле css</h2>
-        <p>index.html</p>
-        <pre><code>&lt;head&gt;
-    ...
-    &lt;link rel="stylesheet" href="style.css"&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;h1&gt;Баскетбол&lt;/h1&gt;
-&lt;p class="main-definition"&gt; — спортивная командная игра с мячом, в которой мяч забрасывают руками в кольцо соперника.&lt;/p&gt;
-...</code></pre>
-        <p>style.css</p>
-        <pre><code>.main-definition {
-    color: red;
-}</code></pre>
+        <br>
+        <div class="pre-code" data-filename="index.html">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-html">
+                    &lt;head&gt;
+                    ...
+                    &lt;link rel="stylesheet" href="style.css"&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                    &lt;h1&gt;Баскетбол&lt;/h1&gt;
+                    &lt;p class="main-definition"&gt; — спортивная командная игра с мячом, в которой мяч
+                    забрасывают руками в кольцо соперника.&lt;/p&gt;
+                    ...
+                </code>
+            </pre>
+        </div>
+        <br>
+        <div class="pre-code" data-filename="style.css">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-css">
+                    .main-definition {
+                        color: red;
+                    }
+                </code>
+            </pre>
+        </div>
+        <br>
         <p>Файлы в html подключаются при помощи тега <code>&lt;link&gt;</code>, в котором указывается тип связи <code>rel="stylesheet"</code> и путь до файла <code>href="style.css"</code>.</p>
 
         <p>Данные способы расположены в порядке уменьшения приоритета.</p>
         <p>Для принудительного установления стиля используют ключевое слово <code>!important</code>, которое добавляется после значения свойства.</p>
-        <pre><code>.main-definition {
-    color: red !important;
-}</code></pre>
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-css">
+                    .main-definition {
+                        color: red !important;
+                    }
+                </code>
+            </pre>
+        </div>
         <p>Стили задаются при помощи свойств и их значений, разделённых <code>:</code>.</p>
         <p>Элементы, к которым применяются стили, задаются при помощи <strong>селекторов</strong>.</p>
 
@@ -95,5 +130,6 @@
         </div>
     </div>
 
+    <script src="../assets/js/prism.js"></script>
 </body>
 </html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Способы задания цвета в CSS - HTML и CSS</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <link href="../assets/css/prism.css" rel="stylesheet" />
 </head>
 <body>
     <div class="container">
@@ -14,11 +15,17 @@
         
         <p>Цвет можно задать для различных свойств CSS: <code>color</code> (цвет текста), <code>background-color</code> (цвет фона), <code>border-color</code> (цвет границы) и других.</p>
         
-        <pre><code>p {
-    color: red;
-    background-color: #ffffff;
-    border-color: rgb(0, 0, 0);
-}</code></pre>
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-css">
+                    p {
+                        color: red;
+                        background-color: #ffffff;
+                        border-color: rgb(0, 0, 0);
+                    }
+                </code>
+            </pre>
+        </div>
         
         <h2>Способ 1: Именованные цвета</h2>
         
@@ -26,15 +33,21 @@
         
         <p>Примеры: <code>red</code>, <code>blue</code>, <code>green</code>, <code>black</code>, <code>white</code>, <code>yellow</code>, <code>orange</code>, <code>purple</code> и многие другие.</p>
         
-        <pre><code>h1 {
-    color: red;
-}
-p {
-    background-color: lightblue;
-}
-div {
-    border-color: darkgreen;
-}</code></pre>
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-css">
+                    h1 {
+                        color: red;
+                    }
+                    p {
+                        background-color: lightblue;
+                    }
+                    div {
+                        border-color: darkgreen;
+                    }
+                </code>
+            </pre>
+        </div>
         
         <h2>Способ 2: Hex-коды (шестнадцатеричная система)</h2>
         
@@ -42,24 +55,36 @@ div {
         
         <p>Значения варьируются от <code>00</code> (минимум) до <code>FF</code> (максимум) в шестнадцатеричной системе счисления.</p>
         
-        <pre><code>body {
-    background-color: #ffffff;
-}
-h1 {
-    color: #000000;
-}
-a {
-    color: #0066cc;
-}
-p {
-    color: #ff6600;
-}</code></pre>
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-css">
+                    body {
+                        background-color: #ffffff;
+                    }
+                    h1 {
+                        color: #000000;
+                    }
+                    a {
+                        color: #0066cc;
+                    }
+                    p {
+                        color: #ff6600;
+                    }
+                </code>
+            </pre>
+        </div>
         
         <p>Также можно использовать короткую запись из трёх символов: <code>#RGB</code>. Каждый символ удваивается. Например, <code>#f00</code> эквивалентно <code>#ff0000</code> (красный).</p>
         
-        <pre><code>#f00  /* красный */
-#0f0  /* зелёный */
-#00f  /* синий */</code></pre>
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-css">
+                    #f00  /* красный */
+                    #0f0  /* зелёный */
+                    #00f  /* синий */
+                </code>
+            </pre>
+        </div>
         
         <h2>Способ 3: Hex-коды с прозрачностью</h2>
         
@@ -78,24 +103,36 @@ p {
             </ul>
         </div>
         
-        <pre><code>div {
-    background-color: #ff0000ff;  /* красный, полностью непрозрачный */
-}
-p {
-    background-color: #0000ffcc;  /* синий с 80% непрозрачностью */
-}
-span {
-    color: #00ff0080;             /* зелёный с 50% прозрачностью */
-}
-button {
-    background-color: #ffffff33;  /* белый с 20% прозрачностью */
-}</code></pre>
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-css">
+                    div {
+                        background-color: #ff0000ff;  /* красный, полностью непрозрачный */
+                    }
+                    p {
+                        background-color: #0000ffcc;  /* синий с 80% непрозрачностью */
+                    }
+                    span {
+                        color: #00ff0080;             /* зелёный с 50% прозрачностью */
+                    }
+                    button {
+                        background-color: #ffffff33;  /* белый с 20% прозрачностью */
+                    }
+                </code>
+            </pre>
+        </div>
         
         <p>Также существует краткая четырёхзначная запись: <code>#RGBA</code>. Каждый символ удваивается. Например, <code>#f00f</code> эквивалентно <code>#ff0000ff</code> (красный, полностью непрозрачный).</p>
         
-        <pre><code>#f008  /* красный с 50% прозрачностью */
-#0f04  /* зелёный с 27% прозрачностью */
-#00ff  /* синий, полностью непрозрачный */</code></pre>
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-css">
+                    #f008  /* красный с 50% прозрачностью */
+                    #0f04  /* зелёный с 27% прозрачностью */
+                    #00ff  /* синий, полностью непрозрачный */
+                </code>
+            </pre>
+        </div>
         
         <p><strong>Примечание:</strong> Восьмизначные hex-коды поддерживаются всеми современными браузерами. Для старых браузеров используйте RGBA или HSLA форматы.</p>
         
@@ -105,18 +142,24 @@ button {
         
         <p>0 означает полное отсутствие этого цвета, 255 означает максимальную интенсивность.</p>
         
-        <pre><code>p {
-    color: rgb(255, 0, 0);      /* красный */
-}
-h1 {
-    color: rgb(0, 255, 0);      /* зелёный */
-}
-body {
-    background-color: rgb(0, 0, 255);  /* синий */
-}
-div {
-    border-color: rgb(128, 128, 128);  /* серый */
-}</code></pre>
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-css">
+                    p {
+                        color: rgb(255, 0, 0);      /* красный */
+                    }
+                    h1 {
+                        color: rgb(0, 255, 0);      /* зелёный */
+                    }
+                    body {
+                        background-color: rgb(0, 0, 255);  /* синий */
+                    }
+                    div {
+                        border-color: rgb(128, 128, 128);  /* серый */
+                    }
+                </code>
+            </pre>
+        </div>
         
         <h2>Способ 5: RGBA (Red, Green, Blue, Alpha)</h2>
         
@@ -124,15 +167,21 @@ div {
         
         <p>Значение прозрачности (альфа-канал) варьируется от 0 (полностью прозрачный) до 1 (полностью непрозрачный).</p>
         
-        <pre><code>p {
-    color: rgba(255, 0, 0, 0.5);       /* красный с 50% прозрачностью */
-}
-div {
-    background-color: rgba(0, 0, 255, 0.3);  /* синий с 70% прозрачностью */
-}
-span {
-    color: rgba(0, 0, 0, 1);           /* полностью непрозрачный чёрный */
-}</code></pre>
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-css">
+                    p {
+                        color: rgba(255, 0, 0, 0.5);       /* красный с 50% прозрачностью */
+                    }
+                    div {
+                        background-color: rgba(0, 0, 255, 0.3);  /* синий с 70% прозрачностью */
+                    }
+                    span {
+                        color: rgba(0, 0, 0, 1);           /* полностью непрозрачный чёрный */
+                    }
+                </code>
+            </pre>
+        </div>
         
         <h2>Способ 6: HSL (Hue, Saturation, Lightness)</h2>
         
@@ -142,18 +191,24 @@ span {
         <p><strong>Насыщенность (Saturation)</strong> — процент от 0% (серый) до 100% (чистый цвет).</p>
         <p><strong>Светлота (Lightness)</strong> — процент от 0% (чёрный) до 100% (белый), 50% — нормальный цвет.</p>
         
-        <pre><code>h1 {
-    color: hsl(0, 100%, 50%);          /* красный */
-}
-p {
-    color: hsl(120, 100%, 50%);        /* зелёный */
-}
-div {
-    background-color: hsl(240, 100%, 50%);  /* синий */
-}
-span {
-    color: hsl(39, 100%, 50%);         /* оранжевый */
-}</code></pre>
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-css">
+                    h1 {
+                        color: hsl(0, 100%, 50%);          /* красный */
+                    }
+                    p {
+                        color: hsl(120, 100%, 50%);        /* зелёный */
+                    }
+                    div {
+                        background-color: hsl(240, 100%, 50%);  /* синий */
+                    }
+                    span {
+                        color: hsl(39, 100%, 50%);         /* оранжевый */
+                    }
+                </code>
+            </pre>
+        </div>
         
         <h2>Способ 7: HSLA (Hue, Saturation, Lightness, Alpha)</h2>
         
@@ -161,67 +216,77 @@ span {
         
         <p>Параметр <code>alpha</code> задаёт прозрачность от 0 (полностью прозрачный) до 1 (полностью непрозрачный).</p>
         
-        <pre><code>p {
-    color: hsla(0, 100%, 50%, 0.5);    /* красный с 50% прозрачностью */
-}
-div {
-    background-color: hsla(120, 100%, 50%, 0.3);  /* зелёный с 70% прозрачностью */
-}</code></pre>
+        <div class="pre-code">
+            <pre class="line-numbers match-braces" data-download-link>
+                <code class="language-css">
+                    p {
+                        color: hsla(0, 100%, 50%, 0.5);    /* красный с 50% прозрачностью */
+                    }
+                    div {
+                        background-color: hsla(120, 100%, 50%, 0.3);  /* зелёный с 70% прозрачностью */
+                    }
+                </code>
+            </pre>
+        </div>
         
         <hr>
         
         <h3>Сравнение способов</h3>
         
-        <div class="blockquote">
-            <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; border-collapse: collapse;">
-                <tr>
-                    <th>Способ</th>
-                    <th>Формат</th>
-                    <th>Пример</th>
-                    <th>Использование</th>
-                </tr>
-                <tr>
-                    <td>Именованные цвета</td>
-                    <td>Название</td>
-                    <td><code>red</code></td>
-                    <td>Быстро и просто, ограниченный набор</td>
-                </tr>
-                <tr>
-                    <td>Hex-коды</td>
-                    <td>#RRGGBB или #RGB</td>
-                    <td><code>#ff0000</code> или <code>#f00</code></td>
-                    <td>Популярен в веб-дизайне, совместим со всеми браузерами</td>
-                </tr>
-                <tr>
-                    <td>Hex-коды с прозрачностью</td>
-                    <td>#RRGGBBAA или #RGBA</td>
-                    <td><code>#ff0000cc</code> или <code>#f00c</code></td>
-                    <td>Hex-коды с альфа-каналом для прозрачности</td>
-                </tr>
-                <tr>
-                    <td>RGB</td>
-                    <td>rgb(r, g, b)</td>
-                    <td><code>rgb(255, 0, 0)</code></td>
-                    <td>Подходит для динамического задания цветов в JavaScript</td>
-                </tr>
-                <tr>
-                    <td>RGBA</td>
-                    <td>rgba(r, g, b, a)</td>
-                    <td><code>rgba(255, 0, 0, 0.5)</code></td>
-                    <td>Используется, когда нужна прозрачность</td>
-                </tr>
-                <tr>
-                    <td>HSL</td>
-                    <td>hsl(h, s%, l%)</td>
-                    <td><code>hsl(0, 100%, 50%)</code></td>
-                    <td>Интуитивен для подбора оттенков и создания схем</td>
-                </tr>
-                <tr>
-                    <td>HSLA</td>
-                    <td>hsla(h, s%, l%, a)</td>
-                    <td><code>hsla(0, 100%, 50%, 0.5)</code></td>
-                    <td>HSL с прозрачностью</td>
-                </tr>
+        <div class="table-container">
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Способ</th>
+                        <th>Формат</th>
+                        <th>Пример</th>
+                        <th>Использование</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Именованные цвета</td>
+                        <td>Название</td>
+                        <td><code>red</code></td>
+                        <td>Быстро и просто, ограниченный набор</td>
+                    </tr>
+                    <tr>
+                        <td>Hex-коды</td>
+                        <td>#RRGGBB или #RGB</td>
+                        <td><code>#ff0000</code> или <code>#f00</code></td>
+                        <td>Популярен в веб-дизайне, совместим со всеми браузерами</td>
+                    </tr>
+                    <tr>
+                        <td>Hex-коды с прозрачностью</td>
+                        <td>#RRGGBBAA или #RGBA</td>
+                        <td><code>#ff0000cc</code> или <code>#f00c</code></td>
+                        <td>Hex-коды с альфа-каналом для прозрачности</td>
+                    </tr>
+                    <tr>
+                        <td>RGB</td>
+                        <td>rgb(r, g, b)</td>
+                        <td><code>rgb(255, 0, 0)</code></td>
+                        <td>Подходит для динамического задания цветов в JavaScript</td>
+                    </tr>
+                    <tr>
+                        <td>RGBA</td>
+                        <td>rgba(r, g, b, a)</td>
+                        <td><code>rgba(255, 0, 0, 0.5)</code></td>
+                        <td>Используется, когда нужна прозрачность</td>
+                    </tr>
+                    <tr>
+                        <td>HSL</td>
+                        <td>hsl(h, s%, l%)</td>
+                        <td><code>hsl(0, 100%, 50%)</code></td>
+                        <td>Интуитивен для подбора оттенков и создания схем</td>
+                    </tr>
+                    <tr>
+                        <td>HSLA</td>
+                        <td>hsla(h, s%, l%, a)</td>
+                        <td><code>hsla(0, 100%, 50%, 0.5)</code></td>
+                        <td>HSL с прозрачностью</td>
+                    </tr>
+                </tbody>
             </table>
         </div>
         
@@ -238,5 +303,6 @@ div {
         </div>
     </div>
 
+    <script src="../assets/js/prism.js"></script>
 </body>
 </html>
